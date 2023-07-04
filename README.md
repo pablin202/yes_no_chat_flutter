@@ -1,4 +1,4 @@
-# Chat App
+# Yes/No Chat App
 
 ## Description
 This is a basic chat application built using Dart and Flutter. The main objective of this project is to showcase the usage of basic Flutter libraries and concepts. The app allows users to ask questions, and it responds with a simple "yes" or "no" answer, accompanied by a GIF before each response.
@@ -12,17 +12,17 @@ This is a basic chat application built using Dart and Flutter. The main objectiv
 The following technologies and libraries are utilized in this application:
 
 ### Dart and Flutter
-- Dart: A programming language used to build Flutter applications.
-- Flutter: An open-source UI framework used to create beautiful and natively compiled applications for mobile, web, and desktop from a single codebase.
+- [Dart](https://dart.dev/): A programming language used to build Flutter applications.
+- [Flutter](https://flutter.dev/): An open-source UI framework used to create beautiful and natively compiled applications for mobile, web, and desktop from a single codebase.
 
 ### State Management
-- Provider: A state management library in Flutter that allows easy sharing of data between different parts of the application.
+- [Provider](https://pub.dev/packages/provider): A state management library in Flutter that allows easy sharing of data between different parts of the application.
 
 ### Mappers
 - Mappers: Custom mapping functions used to transform data between different formats or structures.
 
 ### HTTP Requests
-- Dio: A powerful HTTP client library for Dart and Flutter, used for making HTTP requests and handling responses.
+- [Dio](https://pub.dev/packages/dio): A powerful HTTP client library for Dart and Flutter, used for making HTTP requests and handling responses.
 
 ### Packages
 - Various Flutter packages: The project utilizes various Flutter packages to enhance functionality and simplify development.
@@ -32,6 +32,16 @@ The following technologies and libraries are utilized in this application:
 
 ### Scroll
 - Scroll: Flutter provides built-in scrolling widgets and features to handle scrollable content.
+
+## Screenshots
+Here are some screenshots of the Chat App:
+
+<img src="/screenshots/screenshot1.png" alt="Screenshot 1" width="300" />
+*The chat interface where users can input their questions.*
+<img src="/screenshots/screenshot2.png" alt="Screenshot 2" width="300" />
+*An example response with a "yes" answer and an accompanying GIF.*
+<img src="/screenshots/screenshot3.png" alt="Screenshot 3" width="300" />
+*Another example response with a "no" answer and an accompanying GIF.*
 
 ## Installation
 To run the Chat App on your local machine, follow these steps:

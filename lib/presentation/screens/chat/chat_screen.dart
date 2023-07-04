@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:yes_no_flutter_app/domain/entities/message.dart';
+import 'package:yes_no_flutter_app/presentation/providers/chat_provider.dart';
 import 'package:yes_no_flutter_app/presentation/widgets/her_message_bubble.dart';
 import 'package:yes_no_flutter_app/presentation/widgets/my_message_bubble.dart';
 import 'package:yes_no_flutter_app/presentation/widgets/shared/message_field_box.dart';
@@ -30,7 +33,7 @@ class _ChatAppBar extends StatelessWidget implements PreferredSizeWidget {
           backgroundImage: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmR4hqMCbhQxm9HJYkPlh-W-fZKJ6sqehuMg&usqp=CAU'),
         ),
       ),
-      title: const Text('Hola'),
+      title: const Text('Tony Stark'),
     );
   }
 }
@@ -40,15 +43,23 @@ class _ChatView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final chatProvider = context.watch<ChatProvider>();
+
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8),
+        padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Column(children: [
-          Expanded(child: ListView.builder(itemCount: 100, itemBuilder: (context, index) {
-            return (index % 2 ==0) ? const HerMessageBubble(): const MyMessageBubble();
+          Expanded(child: ListView.builder(
+            controller: chatProvider.chatScrollCtrl,
+            itemCount: chatProvider.messages.length, itemBuilder: (context, index) {
+            final msg = chatProvider.messages[index];
+            return (msg.fromWho == FromWho.his) ? HerMessageBubble(message: msg): MyMessageBubble(message: msg);
           })
           ),
-          const MessageFieldBox()
+          MessageFieldBox(onValue: (value) {
+            chatProvider.sendMessage(value); 
+          })
         ]),
       ),
     );
