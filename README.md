@@ -36,12 +36,7 @@ The following technologies and libraries are utilized in this application:
 ## Screenshots
 Here are some screenshots of the Chat App:
 
-<img src="/screenshots/screenshot1.png" alt="Screenshot 1" width="300" />
-*The chat interface where users can input their questions.*
-<img src="/screenshots/screenshot2.png" alt="Screenshot 2" width="300" />
-*An example response with a "yes" answer and an accompanying GIF.*
-<img src="/screenshots/screenshot3.png" alt="Screenshot 3" width="300" />
-*Another example response with a "no" answer and an accompanying GIF.*
+<img src="https://github.com/pablin202/yes_no_chat_flutter/assets/8398530/436846e8-86a7-4c21-8242-2be1043750ac" alt="Screenshot 1" width="300" />
 
 ## Installation
 To run the Chat App on your local machine, follow these steps:
